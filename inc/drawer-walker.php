@@ -1,18 +1,18 @@
 <?php
 class Walker_mdcwp_drawer extends Walker_Nav_menu {
-	function start_lvl(&$output, $depth) {
+  public function start_lvl(&$output, $depth=0, $args=array()) {
 		$indent = str_repeat("\t", $depth);
 		$output .= "\n$indent\n";
 	}
 
-	function start_el(&$output, $item, $depth=0, $args=array(), $id=0) {
+	public function start_el(&$output, $item, $depth=0, $args=array(), $id=0) {
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
 		$class_names = $value = '';
 
 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 		$classes[] = 'menu-item-' . $item->ID;
-		
+
 		$item->icon = get_post_meta($item->ID, 'menu-item-field_icon', true);
 
 		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );

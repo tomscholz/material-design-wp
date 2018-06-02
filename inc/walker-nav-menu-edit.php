@@ -21,7 +21,7 @@ class MDCWP_Walker_Edit extends Walker_Nav_Menu_Edit {
      * @param array  $args   Menu item args.
      * @param int    $id     Nav menu ID.
      */
-    function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+    public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
         $item_output = '';
 
         parent::start_el( $item_output, $item, $depth, $args, $id );

@@ -1,11 +1,11 @@
 <?php
 class Walker_mdcwp_menu extends Walker_Nav_menu {
-	function start_lvl(&$output, $depth) {
+  public function start_lvl(&$output, $depth=0, $args=array()) {
 		$indent = str_repeat("\t", $depth);
 		$output .= "\n$indent\n";
 	}
 
-	function start_el(&$output, $item, $depth=0, $args=array(), $id=0) {
+	public function start_el(&$output, $item, $depth=0, $args=array(), $id=0) {
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
 		$class_names = $value = '';
