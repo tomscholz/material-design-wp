@@ -336,3 +336,17 @@ function mdcwp_filter_walker( $walker ) {
     return $walker;
 }
 add_filter( 'wp_edit_nav_menu_walker', 'mdcwp_filter_walker', 99 );
+
+
+/*
+	==========================================
+     * Let WordPress manage the document title.
+     * By adding theme support, we declare that this theme does not use a
+     * hard-coded <title> tag in the document head, and expect WordPress to
+     * provide it for us.
+   	==========================================
+*/
+function wpse_theme_setup() {
+    add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'wpse_theme_setup' );

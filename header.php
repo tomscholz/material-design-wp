@@ -1,17 +1,7 @@
-<!--
-███╗   ███╗██████╗  ██████╗██╗    ██╗██████╗ 
-████╗ ████║██╔══██╗██╔════╝██║    ██║██╔══██╗
-██╔████╔██║██║  ██║██║     ██║ █╗ ██║██████╔╝
-██║╚██╔╝██║██║  ██║██║     ██║███╗██║██╔═══╝ 
-██║ ╚═╝ ██║██████╔╝╚██████╗╚███╔███╔╝██║     
-╚═╝     ╚═╝╚═════╝  ╚═════╝ ╚══╝╚══╝ ╚═╝     
-Sooo, wanna look at the source code? Hmm?
--->
 <!DOCTYPE html>
 <html class="mdc-typography" id="root" lang="<?php bloginfo('language'); ?>">
 	<head>
 		<meta charset="<?php bloginfo('charset') ?>">
-		<title><?php bloginfo('name') ?> <?php wp_title('|'); ?></title>
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 		<?php wp_head(); ?>
 		<?php if(get_post_meta( $post->ID, '_mdcwp_immersive_mode_value_key', true )) {?>
